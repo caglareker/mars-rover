@@ -17,6 +17,7 @@ public class MarsRover {
         this.plateau = plateau;
     }
 
+    //Parse instructions
     public PlateauPosition parseInstructions(String instructions) {
         char[] arrInstructions = instructions.toUpperCase().toCharArray();
         try {
@@ -56,6 +57,7 @@ public class MarsRover {
         }
     }
 
+    //Turn left
     private void leftTurn(char compass) {
         switch (compass) {
             case 'N':
@@ -74,6 +76,7 @@ public class MarsRover {
         }
     }
 
+    //Turn right
     private void rightTurn(char compass) {
         switch (compass) {
             case 'N':

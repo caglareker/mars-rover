@@ -33,20 +33,40 @@ until the first one has finished moving.
 The output for each rover should be its final co-ordinates and heading.
 Input and Output
 
-Test Input:
+### Test Input:
 
-#### 5 5
-
-#### 1 2 N
-
-#### LMLMLMLMM
-
-#### 3 3 E
-
-#### MMRMMRMRRM
+```
+5 5
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRM
+```
 
 ### Expected Output:
 
-#### 1 3 N
+```
+1 3 N
+5 1 E
+```
 
-#### 5 1 E
+### How to run
+
+1. Extract files from `MarsRover.zip`
+2. `cd MarsRover/`
+3. `docker build -t mars-rover:1.0.0 .`
+4. `docker run -i -t mars-rover:1.0.0`
+
+### OR
+
+1. Extract files from `MarsRover.zip`
+2. `cd MarsRover/`
+3. `mvn clean package`
+4. `java -jar target/mars-rover-1.0.0.jar`
+
+### Technical Details
+
+* Java 11
+* Maven
+* Junit 5
+* Docker

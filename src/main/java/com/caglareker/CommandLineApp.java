@@ -1,10 +1,10 @@
 package com.caglareker;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import static com.caglareker.util.MarsRoverCommonUtil.isInteger;
 
 public class CommandLineApp {
     private static final Scanner scanner = new Scanner(System.in);
@@ -43,7 +43,7 @@ public class CommandLineApp {
     private static void getMarsRoverCount() {
         System.out.println("Please enter how many mars rover will be discover plateau. (Example: 2)");
         String roverCountInput = scanner.nextLine();
-        if (StringUtils.isNumeric(roverCountInput)) {
+        if (isInteger(roverCountInput)) {
             roverCount = Integer.parseInt(roverCountInput);
         }
     }
